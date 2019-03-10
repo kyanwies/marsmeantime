@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600,700');
+
+html {
+	background-color: #212121;
+	color: white;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+}
+body {
+	height: 100%;
+}
+#icon {
+	grid-area:one; 
+	position: relative;
+	width: 25vw;
+	margin-bottom: 0px;
+}
+#welkom {
+	grid-area:two;
+	position: relative;
+	font-size: 10vw;
+	margin-bottom: 0%;
+	font-weight: 700;
+}
+#date {
+	grid-area:three;
+	position: relative;
+	font-size: 5vw;
+	margin-bottom: 0%;
+	color: #b2b2b2;
+	font-weight: 600;
+}
+#text {
+	grid-area:four;
+	position: relative;
+	margin-top: 1%;
+	font-size: 5vw;
+	color: #b2b2b2;
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+#clock {
+	grid-area:five;
+	font-size: 15vw;
+	margin-top: 50%;
+}
+#wrapper {
+	display: grid;
+	grid-template-areas:
+    	'one'
+    	'two'
+   		'three'
+   		'four'
+   		'five';
+   	justify-items: center;
+   	margin-top: 20%; 
+}
+
+@media only screen and (min-width: 600px) {
+	#icon {width: 20vw;}
+	#welkom {font-size:8vw;}
+	#date {font-size: 4vw;}
+	#text {font-size: 4vw;}
+	#clock {margin-top: 30%;}
+}
+
+@media only screen and (min-width: 960px) {
+	#wrapper {margin-top: 5%;}
+	#icon {width: 10vw;}
+	#welkom {font-size:4vw;}
+	#date {font-size: 2vw;}
+	#text {font-size: 2vw;}
+	#clock {margin-top: 8%; font-size: 8vw;}
+}
+
+@media only screen and (min-width: 1281px) {
+	#wrapper {margin-top: 8%;}
+	#icon {width: 8vw;}
+	#welkom {font-size:3.5vw;}
+	#date {font-size: 1.5vw;}
+	#text {font-size: 1.5vw;}
+	#clock {margin-top: 8%; font-size: 6vw;}
+}
+
+
+
+

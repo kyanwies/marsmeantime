@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mars Mean Time</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="shortcut icon" href="favicon.ico">
+		<script type="text/javascript" src="script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+	</head>
+	
+	<body onload="startTime()">
+		<div id="wrapper">
+			<img id="icon"/>
+			
+			<h2 id="welkom"></h2>
+			
+			<h3 id="date"> 
+				Today is 
+				<span id="month"></span> 
+				<span id="day"></span>
+			    <span id="year"></span>.
+			</h3>
+			
+			<p id="text"></p>
+			
+			<div id="clock"></div>
+		</div>
+		<script type="text/javascript"> //alle animaties voor het opstarten		
+			TweenMax.from("img", 1, {ease:Expo.easeOut, bottom:200, opacity:0, scale:0}); //laat icoon zien
+			TweenMax.from("h2", 1, {ease:Expo.easeOut, left:200, opacity:0, delay:0.3}); //wenst je een goede morgen/middag/avond/nacht
+			TweenMax.from("h3", 1, {ease:Expo.easeOut, right:200, opacity:0, delay:0.5}); //laat de datum zien
+			TweenMax.from("p", 1, {ease:Expo.easeOut, right:200, opacity:0, delay:0.6}); //laat bericht zien
+			TweenMax.from("#clock", 1, {ease:Expo.easeOut, opacity:0, scale:5, delay:1}); //laat de tijd zien
+			TweenMax.to("img", 1.5, {ease:Sine.easeInOut, bottom:20, delay:0.5, yoyoEase: true, repeat:-1});	
+		</script>
+	</body>
+</html>
